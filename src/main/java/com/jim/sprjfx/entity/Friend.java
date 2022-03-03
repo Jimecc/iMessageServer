@@ -1,0 +1,16 @@
+package com.jim.sprjfx.entity;
+
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class Friend {
+
+    private String username;
+    private String fusername;
+    private String status;
+}

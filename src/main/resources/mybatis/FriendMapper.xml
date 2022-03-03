@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jim.sprjfx.mapper.FriendMapper">
+    <insert id="newFriend" parameterType="com.jim.sprjfx.entity.Friend" >
+        insert into imessage.friends (username, fusername) values ( #{fusername},#{username} )
+    </insert>
+
+    <insert id="allowFriend" parameterType="com.jim.sprjfx.entity.Friend" >
+        insert into imessage.friends (username, fusername) values ( #{username},#{fusername} )
+    </insert>
+
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jim.sprjfx.mapper.UserMapper">
+    <insert id="newUser" parameterType="com.jim.sprjfx.entity.User" >
+        insert into imessage.user(nickname, username, password,salt,mail,avatar,info,createtime,statue) values ( #{nickname},#{username},#{password},#{salt},#{mail},#{avatar},#{info},#{createtime},#{statue} )
+    </insert>
+
+    <select id="getUserByUserName" parameterType="string" resultType="com.jim.sprjfx.entity.User">
+        select * from imessage.user where username=#{username}
+    </select>
+
+</mapper>
